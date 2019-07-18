@@ -1,7 +1,7 @@
-package com.esgi.bookstore.manga.services;
+package com.esgi.bookstore.service;
 
-import com.esgi.bookstore.manga.model.Manga;
-import com.esgi.bookstore.manga.repository.MangaRepository;
+import com.esgi.bookstore.model.Manga;
+import com.esgi.bookstore.repository.MangaRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
@@ -26,6 +26,6 @@ public class MangaService {
 
     @Transactional
     public List<Manga> getMangasByID(Integer mangaID) {
-        return mangaRepository.findAll(mangaID);
+        return mangaRepository.findByID(mangaID);
     }
 }

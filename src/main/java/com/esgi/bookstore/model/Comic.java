@@ -1,4 +1,4 @@
-package com.esgi.bookstore.manga.model;
+package com.esgi.bookstore.model;
 
 import lombok.*;
 import javax.persistence.Entity;
@@ -11,10 +11,11 @@ import javax.persistence.Entity;
 @ToString(callSuper = true)
 
 @Entity
-public class Manga {
+public class Comic {
 
     private String name;
     private String publishDate;
     private String category;
     private String author;
+    private int price;
 }

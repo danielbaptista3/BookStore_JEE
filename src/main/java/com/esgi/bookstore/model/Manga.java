@@ -1,20 +1,16 @@
-package com.esgi.bookstore.book.model;
+package com.esgi.bookstore.model;
 
 import lombok.*;
 import javax.persistence.Entity;
-
-@Getter
-@Setter
-@Builder
-@AllArgsConstructor
-@NoArgsConstructor
-@ToString(callSuper = true)
+import javax.persistence.Table;
 
 @Entity
-public class Book {
+@Table(name = "choices")
+public class Manga {
 
     private String name;
     private String publishDate;
     private String category;
     private String author;
+    private int price;
 }

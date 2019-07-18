@@ -1,7 +1,7 @@
-package com.esgi.bookstore.book.services;
+package com.esgi.bookstore.service;
 
-import com.esgi.bookstore.book.model.Book;
-import com.esgi.bookstore.book.repository.BookRepository;
+import com.esgi.bookstore.model.Book;
+import com.esgi.bookstore.repository.BookRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
@@ -26,6 +26,6 @@ public class BookService {
 
     @Transactional
     public List<Book> getBooksByID(Integer bookID) {
-        return bookRepository.findAll(bookID);
+        return bookRepository.findByID(bookID);
     }
 }
