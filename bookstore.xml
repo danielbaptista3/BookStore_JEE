@@ -381,6 +381,10 @@
     <pathelement location="${path.variable.maven_repository}/org/springframework/boot/spring-boot-autoconfigure/2.1.5.RELEASE/spring-boot-autoconfigure-2.1.5.RELEASE.jar"/>
   </path>
   
+  <path id="library.maven:_org.springframework.boot:spring-boot-starter-hateoas:2.1.5.release.classpath">
+    <pathelement location="${path.variable.maven_repository}/org/springframework/boot/spring-boot-starter-hateoas/2.1.5.RELEASE/spring-boot-starter-hateoas-2.1.5.RELEASE.jar"/>
+  </path>
+  
   <path id="library.maven:_org.springframework.boot:spring-boot-starter-json:2.1.5.release.classpath">
     <pathelement location="${path.variable.maven_repository}/org/springframework/boot/spring-boot-starter-json/2.1.5.RELEASE/spring-boot-starter-json-2.1.5.RELEASE.jar"/>
   </path>
@@ -423,6 +427,14 @@
   
   <path id="library.maven:_org.springframework.data:spring-data-jpa:2.1.9.release.classpath">
     <pathelement location="${path.variable.maven_repository}/org/springframework/data/spring-data-jpa/2.1.9.RELEASE/spring-data-jpa-2.1.9.RELEASE.jar"/>
+  </path>
+  
+  <path id="library.maven:_org.springframework.hateoas:spring-hateoas:0.25.1.release.classpath">
+    <pathelement location="${path.variable.maven_repository}/org/springframework/hateoas/spring-hateoas/0.25.1.RELEASE/spring-hateoas-0.25.1.RELEASE.jar"/>
+  </path>
+  
+  <path id="library.maven:_org.springframework.plugin:spring-plugin-core:1.2.0.release.classpath">
+    <pathelement location="${path.variable.maven_repository}/org/springframework/plugin/spring-plugin-core/1.2.0.RELEASE/spring-plugin-core-1.2.0.RELEASE.jar"/>
   </path>
   
   <path id="library.maven:_org.springframework:spring-aop:5.1.7.release.classpath">

@@ -2,21 +2,24 @@ package com.esgi.bookstore.model;
 
 import lombok.Data;
 
-import javax.persistence.*;
+import javax.persistence.Entity;
+import javax.persistence.ManyToOne;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
 
 @Data
 @Entity
-class BookGenres {
+public class BookGenres {
  
     private @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     Long id;
  
     @ManyToOne
-    @JoinColumn(name = "book_id")
     Book book;
  
     @ManyToOne
-    @JoinColumn(name = "genre_id")
+
     Genre genre;
 }
