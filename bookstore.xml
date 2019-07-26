@@ -484,7 +484,7 @@
   
   <!-- Application Server Libraries -->
   <!-- Register Custom Compiler Taskdefs -->
-  <property name="javac2.home" value="${idea.home}/lib"/>
+  <property name="javac2.home" value="var/lib"/>
   <path id="javac2.classpath">
     <fileset dir="${javac2.home}">
       <include name="javac2.jar"/>
