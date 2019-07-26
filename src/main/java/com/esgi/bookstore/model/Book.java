@@ -1,28 +1,36 @@
 package com.esgi.bookstore.model;
 
+import lombok.Data;
+
 import javax.persistence.*;
 import javax.validation.constraints.NotBlank;
 import javax.validation.constraints.Size;
+import java.util.Date;
+import java.util.Set;
 
+@Data
 @Entity
-@Table(name = "Book")
 public class Book {
 
-    @Id
+    private @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long id;
+    Long id;
 
     @NotBlank
-    @Size(max = 140)
-    private String name;
+    @Size(max = 100)
+    private String title;
 
-    private String publishDate;
+    @ManyToOne
+    private Author author;
 
-    private String author;
+    private Publisher publisher;
+
+    private Date publishDate;
 
     private Integer price;
 
-    @ManyToOne(fetch = FetchType.LAZY, optional = false)
-    @JoinColumn(name = "poll_id", nullable = false)
-    private Category category;
+    private Type type;
+
+    @OneToMany(mappedBy = "book")
+    Set<BookGenres> bookGenres;
 }
